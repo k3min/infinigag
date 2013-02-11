@@ -1,5 +1,7 @@
 # InfiniGAG API
 
+Right now, the API is very basic, but it should hopefully retrieve what you’re looking for.
+
 I love it when services provide API's. It allows people to play around and make cool apps, and so I did not want to take the fun away from you.
 
 ## Resource URL
@@ -15,112 +17,112 @@ Parameter   | Description                                | Example Values | Defa
 
 ## Example Request
 
-**GET** http://infinigag.eu01.aws.af.cm/?section=trending&page=6548695
+**GET** http://infinigag.eu01.aws.af.cm/?section=hot
 
 	{
 		"attributes": {
-			"url": "http:\/\/9gag.com\/trending\/id\/6548695",
-			"next": 6550985
+			"url": "http:\/\/9gag.com\/hot\/",
+			"next": 6514942
 		},
 		"images": [{
-			"id": 6553659,
-			"title": "Internet Bullying",
-			"url": "http:\/\/9gag.com\/gag\/6553659",
-			"votes": 2446,
+			"id": 6545283,
+			"title": "Teens Next Door",
+			"url": "http:\/\/9gag.com\/gag\/6545283",
+			"votes": 10876,
 			"image": {
-				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6553659_220x145.jpg",
-				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6553659_460s.jpg",
-				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6553659_700b.jpg"
+				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6545283_220x145.jpg",
+				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6545283_460s.jpg",
+				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6545283_700b.jpg"
 			}
 		}, {
-			"id": 6551593,
-			"title": "How I felt when my gf asked if her butt had gotten bigger",
-			"url": "http:\/\/9gag.com\/gag\/6551593",
-			"votes": 1924,
+			"id": 6541691,
+			"title": "Holland is below sea level...",
+			"url": "http:\/\/9gag.com\/gag\/6541691",
+			"votes": 2831,
 			"image": {
-				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6551593_220x145.jpg",
-				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6551593_460s.jpg",
-				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6551593_700b.jpg"
+				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6541691_220x145.jpg",
+				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6541691_460s.jpg",
+				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6541691_700b.jpg"
 			}
 		}, {
-			"id": 6549585,
-			"title": "Silly prince",
-			"url": "http:\/\/9gag.com\/gag\/6549585",
-			"votes": 3320,
+			"id": 6545866,
+			"title": "This is how Chuck Norris gets to\ufeff work in the morning",
+			"url": "http:\/\/9gag.com\/gag\/6545866",
+			"votes": 5084,
 			"image": {
-				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6549585_220x145.jpg",
-				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6549585_460s.jpg",
-				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6549585_700b.jpg"
+				"thumb": "http:\/\/img.youtube.com\/vi\/FT8tpGHa6Y4\/0.jpg",
+				"small": "http:\/\/img.youtube.com\/vi\/FT8tpGHa6Y4\/0.jpg",
+				"big": "http:\/\/img.youtube.com\/vi\/FT8tpGHa6Y4\/0.jpg"
 			}
 		}, {
-			"id": 6553650,
-			"title": "Found a dead snowman.",
-			"url": "http:\/\/9gag.com\/gag\/6553650",
-			"votes": 1931,
+			"id": 6542187,
+			"title": "Doesn't matter free foot",
+			"url": "http:\/\/9gag.com\/gag\/6542187",
+			"votes": 15279,
 			"image": {
-				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6553650_220x145.jpg",
-				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6553650_460s.jpg",
-				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6553650_700b.jpg"
+				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6542187_220x145_v1.jpg",
+				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6542187_460s_v1.jpg",
+				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6542187_700b_v1.jpg"
 			}
 		}, {
-			"id": 6542709,
-			"title": "Nobody's home...",
-			"url": "http:\/\/9gag.com\/gag\/6542709",
-			"votes": 2409,
+			"id": 6294487,
+			"title": "People who care about Facebook relationships",
+			"url": "http:\/\/9gag.com\/gag\/6294487",
+			"votes": 11284,
 			"image": {
-				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6542709_220x145.jpg",
-				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6542709_460s.jpg",
-				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6542709_700b.jpg"
+				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6294487_220x145.jpg",
+				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6294487_460s.jpg",
+				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6294487_700b.jpg"
 			}
 		}, {
-			"id": 6551676,
-			"title": "I FOUND HER",
-			"url": "http:\/\/9gag.com\/gag\/6551676",
-			"votes": 3381,
+			"id": 6507476,
+			"title": "Housekeeping loves this",
+			"url": "http:\/\/9gag.com\/gag\/6507476",
+			"votes": 13628,
 			"image": {
-				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6551676_220x145.jpg",
-				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6551676_460s.jpg",
-				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6551676_700b.jpg"
+				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6507476_220x145.jpg",
+				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6507476_460s.jpg",
+				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6507476_700b.jpg"
 			}
 		}, {
-			"id": 6553649,
-			"title": "Ellen DeGeneres gets a good look at Katy Perry.",
-			"url": "http:\/\/9gag.com\/gag\/6553649",
-			"votes": 3647,
+			"id": 6534144,
+			"title": "Stores know what men go through!",
+			"url": "http:\/\/9gag.com\/gag\/6534144",
+			"votes": 11634,
 			"image": {
-				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6553649_220x145.jpg",
-				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6553649_460s.jpg",
-				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6553649_700b.jpg"
+				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6534144_220x145.jpg",
+				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6534144_460s.jpg",
+				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6534144_700b.jpg"
 			}
 		}, {
-			"id": 6551257,
-			"title": "The best calendar EVER!",
-			"url": "http:\/\/9gag.com\/gag\/6551257",
-			"votes": 2420,
+			"id": 6515046,
+			"title": "Trust me! I m an engineer!",
+			"url": "http:\/\/9gag.com\/gag\/6515046",
+			"votes": 8142,
 			"image": {
-				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6551257_220x145.jpg",
-				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6551257_460s.jpg",
-				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6551257_700b.jpg"
+				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6515046_220x145.jpg",
+				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6515046_460s.jpg",
+				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6515046_700b.jpg"
 			}
 		}, {
-			"id": 6549498,
-			"title": "Worship this guy",
-			"url": "http:\/\/9gag.com\/gag\/6549498",
-			"votes": 3015,
+			"id": 6532555,
+			"title": "The King",
+			"url": "http:\/\/9gag.com\/gag\/6532555",
+			"votes": 12767,
 			"image": {
-				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6549498_220x145_v1.jpg",
-				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6549498_460s_v1.jpg",
-				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6549498_700b_v1.jpg"
+				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6532555_220x145.jpg",
+				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6532555_460s.jpg",
+				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6532555_700b.jpg"
 			}
 		}, {
-			"id": 6550985,
-			"title": "Me before exam",
-			"url": "http:\/\/9gag.com\/gag\/6550985",
-			"votes": 3318,
+			"id": 6514942,
+			"title": "Revenge after million years",
+			"url": "http:\/\/9gag.com\/gag\/6514942",
+			"votes": 13298,
 			"image": {
-				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6550985_220x145.jpg",
-				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6550985_460s.jpg",
-				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6550985_700b.jpg"
+				"thumb": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6514942_220x145.jpg",
+				"small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6514942_460s.jpg",
+				"big": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6514942_700b.jpg"
 			}
 		}]
 	}
