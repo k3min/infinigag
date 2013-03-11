@@ -24,8 +24,7 @@ Parameter                 | Description
 			{
 				"id": 6763189,
 				"from": {
-					"name": "orhnbyrk",
-					"link": "http:\/\/9gag.com\/orhnbyrk"
+					"name": "orhnbyrk"
 				},
 				"caption": "History",
 				"images": {
