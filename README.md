@@ -1,6 +1,6 @@
 # InfiniGAG API
 
-Right now, the API is very basic, but it should hopefully retrieve what you’re looking for.
+Right now, the API is very basic, but it should hopefully retrieve what you're looking for.
 
 I love it when services provide API's. It allows people to play around and make cool apps, and so I did not want to take the fun away from you.
 
