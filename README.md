@@ -8,7 +8,7 @@ I love it when services provide API's. It allows people to play around and make 
 Resource URL
 ------------
 
-http://infinigag.eu01.aws.af.cm/2/:section/:id.json
+http://infinigag.eu01.aws.af.cm/:section/:id
 
 Parameters
 ----------
