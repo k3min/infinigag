@@ -1,23 +1,27 @@
-# InfiniGAG API
+InfiniGAG API
+=============
 
 Right now, the API is very basic, but it should hopefully retrieve what you're looking for.
 
 I love it when services provide API's. It allows people to play around and make cool apps, and so I did not want to take the fun away from you.
 
-## Resource URL
+Resource URL
+------------
 
 http://infinigag.eu01.aws.af.cm/2/:section/:id.json
 
-## Parameters
+Parameters
+----------
 
 Parameter                 | Description
 ------------------------- | -----------
 **section**<br>*required* | The section to return results from (`hot`, `trending` or `vote`).<br>**Example Values**: `trending`
      **id**<br>*required* | Specifies the page ID to retrieve results from. `0` gives you the most recent page.<br>**Example Values**: `6548695`
 
-## Example Request
+Example Request
+---------------
 
-**GET** `http://infinigag.eu01.aws.af.cm/2/trending/0.json`
+**GET** `http://infinigag.eu01.aws.af.cm/trending/0`
 
 	{
 		"data": [
@@ -49,7 +53,8 @@ Parameter                 | Description
 		}
 	}
 
-## Voting?
+Voting?
+-------
 
 Each item in the `data` object has an `actions` object with three URLs: `like`, `dislike` and `unlike`. What these do are self-explanatory.
 
@@ -63,3 +68,9 @@ The method is a bit hacky:
 	<iframe name="vote" hidden>
 
 The catch is that the voter needs to be logged in on the 9GAG website.
+
+Uses
+----
+
+- [9GAG (Unofficial)](http://apps.microsoft.com/windows/app/9gag-unofficial/846be2db-a72a-47b7-9507-e81ce0d2dd5b)
+- [GagBook](http://github.com/dicksonleong/GagBook)
