@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Infinigag by k3min</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/k3min/infinigag">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/k3min/infinigag/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/k3min/infinigag/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Infinigag</h1>
+          <p></p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/k3min">k3min</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="infinigag-api" class="anchor" href="#infinigag-api"><span class="octicon octicon-link"></span></a>InfiniGAG API</h1>
+
+<p>Right now, the API is very basic, but it should hopefully retrieve what you're looking for.</p>
+
+<p>I love it when services provide API's. It allows people to play around and make cool apps, and so I did not want to take the fun away from you.</p>
+
+<h2>
+<a name="resource-url" class="anchor" href="#resource-url"><span class="octicon octicon-link"></span></a>Resource URL</h2>
+
+<p><a href="http://infinigag.eu01.aws.af.cm/:section/:id">http://infinigag.eu01.aws.af.cm/:section/:id</a></p>
+
+<h2>
+<a name="parameters" class="anchor" href="#parameters"><span class="octicon octicon-link"></span></a>Parameters</h2>
+
+<table>
+<thead><tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>
+<strong>section</strong><br><em>required</em>
+</td>
+<td>The section to return results from (<code>hot</code>, <code>trending</code> or <code>vote</code>).<br><strong>Example Values</strong>: <code>trending</code>
+</td>
+</tr>
+<tr>
+<td>
+<strong>id</strong><br><em>required</em>
+</td>
+<td>Specifies the page ID to retrieve results from. <code>0</code> gives you the most recent page.<br><strong>Example Values</strong>: <code>6548695</code>
+</td>
+</tr>
+</tbody>
+</table><h2>
+<a name="example-request" class="anchor" href="#example-request"><span class="octicon octicon-link"></span></a>Example Request</h2>
+
+<p><strong>GET</strong> <code>http://infinigag.eu01.aws.af.cm/trending/0</code></p>
+
+<pre><code>{
+    "data": [
+        {
+            "id": 6763189,
+            "from": {
+                "name": "orhnbyrk"
+            },
+            "caption": "History",
+            "images": {
+                "small": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6763189_220x145.jpg",
+                "normal": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6763189_460s.jpg",
+                "large": "http:\/\/d24w6bsrhbeh9d.cloudfront.net\/photo\/6763189_700b.jpg"
+            },
+            "link": "http:\/\/9gag.com\/gag\/6763189",
+            "actions": {
+                "like": "http:\/\/9gag.com\/vote\/like\/id\/6763189",
+                "dislike": "http:\/\/9gag.com\/vote\/dislike\/id\/6763189",
+                "unlike": "http:\/\/9gag.com\/vote\/unlike\/id\/6763189"
+            },
+            "votes": {
+                "count": 0
+            }
+        },
+        ...
+    ],
+    "paging": {
+        "next": 6761235
+    }
+}
+</code></pre>
+
+<h2>
+<a name="voting" class="anchor" href="#voting"><span class="octicon octicon-link"></span></a>Voting?</h2>
+
+<p>Each item in the <code>data</code> object has an <code>actions</code> object with three URLs: <code>like</code>, <code>dislike</code> and <code>unlike</code>. What these do are self-explanatory.</p>
+
+<p>The method is a bit hacky:</p>
+
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;&lt;a target="vote" href="http://9gag.com/vote/like/id/6763189"&gt;Like&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a target="vote" href="http://9gag.com/vote/dislike/id/6763189"&gt;Dislike&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+...
+&lt;iframe name="vote" hidden&gt;
+</code></pre>
+
+<p>The catch is that the voter needs to be logged in on the 9GAG website.</p>
+
+<h2>
+<a name="uses" class="anchor" href="#uses"><span class="octicon octicon-link"></span></a>Uses</h2>
+
+<ul>
+<li><a href="http://apps.microsoft.com/windows/app/9gag-unofficial/846be2db-a72a-47b7-9507-e81ce0d2dd5b">9GAG (Unofficial)</a></li>
+<li><a href="http://github.com/dicksonleong/GagBook">GagBook</a></li>
+</ul>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
