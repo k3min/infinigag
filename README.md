@@ -15,7 +15,7 @@ Parameters
 
 Parameter                 | Description
 ------------------------- | -----------
-**section**<br>*required* | The section to return results from (`hot`, `trending` or `vote`).<br>**Example Values**: `trending`
+**section**<br>*required* | The section to return results from (`hot`, `trending` or `vote`/`fresh`).<br>**Example Values**: `trending`
      **id**<br>*required* | Specifies the page ID to retrieve results from. `0` gives you the most recent page.<br>**Example Values**: `6548695`
 
 Example Request
@@ -49,7 +49,7 @@ Example Request
 			...
 		],
 		"paging": {
-			"next": 6761235
+			"next": "6761235"
 		}
 	}
 
