@@ -8,7 +8,8 @@ I love it when services provide API's. It allows people to play around and make 
 Resource URL
 ------------
 
-http://infinigag.eu01.aws.af.cm/:section/:id
+- http://infinigag.eu01.aws.af.cm/:section/:id
+- http://infinigag-us.aws.af.cm/:section/:id
 
 Parameters
 ----------
