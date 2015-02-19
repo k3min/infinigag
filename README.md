@@ -1,5 +1,5 @@
-InfiniGAG API
-=============
+InfiniGAG API (INACTIVE)
+========================
 
 Right now, the API is very basic, but it should hopefully retrieve what you're looking for.
 
