@@ -12,12 +12,12 @@ I love it when services provide API's. It allows people to play around and make 
 
 Parameter                 | Description
 ------------------------- | -----------
-**section**<br>*required* | The section to return results from (`hot`, `trending` or `fresh`).<br>**Example Values**: `trending`
+**section**<br>*required* | The section (or subsection) to return results from (`hot`, `trending`, `fresh`, etc.)<br>**Example Values**: `design/fresh`
      **id**<br>*optional* | Specifies the page ID to retrieve results from.<br>**Example Values**: `V8eFpqG`
 
 ## Example Request
 
-**GET** [`http://infinigag.k3min.eu/trending`](http://infinigag.k3min.eu/trending)
+**GET** [`http://infinigag.k3min.eu/design/fresh`](http://infinigag.k3min.eu/design/fresh)
 
 	{
 		"status": 200,
