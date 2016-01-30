@@ -1,27 +1,23 @@
-InfiniGAG API
-========================
+# InfiniGAG API
 
 Right now, the API is very basic, but it should hopefully retrieve what you're looking for.
 
 I love it when services provide API's. It allows people to play around and make cool apps, and so I did not want to take the fun away from you.
 
-Resource URL
-------------
+## Resource URL
 
 - http://infinigag.k3min.eu/:section/:id
 
-Parameters
-----------
+## Parameters
 
 Parameter                 | Description
 ------------------------- | -----------
 **section**<br>*required* | The section to return results from (`hot`, `trending` or `fresh`).<br>**Example Values**: `trending`
      **id**<br>*optional* | Specifies the page ID to retrieve results from.<br>**Example Values**: `V8eFpqG`
 
-Example Request
----------------
+## Example Request
 
-**GET** `http://infinigag.k3min.eu/trending`
+**GET** [`http://infinigag.k3min.eu/trending`](http://infinigag.k3min.eu/trending)
 
 	{
 		"status": 200,
@@ -55,8 +51,7 @@ Example Request
 		}
 	}
 
-Uses
-----
+## Uses
 
 - [9GAG (Unofficial)](http://apps.microsoft.com/windows/app/9gag-unofficial/846be2db-a72a-47b7-9507-e81ce0d2dd5b)
 - [GagBook](http://github.com/dicksonleong/GagBook)
