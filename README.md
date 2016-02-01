@@ -4,25 +4,31 @@ Right now, the API is very basic, but it should hopefully retrieve what you're l
 
 I love it when services provide API's. It allows people to play around and make cool apps, and so I did not want to take the fun away from you.
 
-## GET /:section/:id
+## API
 
-### Resource URL
+- [`GET /:section/:id`](#get-sectionid)
+- [`POST /token`](#post-token)
+- [`POST /vote/:type/:id`](#post-votetypeid)
+
+### GET /:section/:id
+
+#### Resource URL
 
 `http://infinigag.k3min.eu/:section/:id`
 
-### Parameters
+#### Parameters
 
 Parameter                      | Description
 ---------                      | -----------
      **section**<br>*required* | The section (or subsection) to return results from (`hot`, `trending`, `fresh`, etc.)<br>**Example Values**: `design/fresh`
           **id**<br>*optional* | Specifies the page ID to retrieve results from.<br>**Example Values**: `V8eFpqG`
-**access_token**<br>*optional* | Token obtained from [`POST /token`](#POST /token).<br>**Example Values**: `9125faf1dda6c7d3fe5cc5574e5ff79158208918955275753b4e1d58efecdf9d`
+**access_token**<br>*optional* | Token obtained from [`POST /token`](#post-token).<br>**Example Values**: `9125faf1dda6c7d3fe5cc5574e5ff79158208918955275753b4e1d58efecdf9d`
 
-### Example Request
+#### Example Request
 
 `GET http://infinigag.k3min.eu/design/fresh`
 
-### Example Result
+#### Example Result
 
 ```json
 {
@@ -57,24 +63,24 @@ Parameter                      | Description
 }
 ```
 
-## POST /token
+### POST /token
 
-### Resource URL
+#### Resource URL
 
 `http://infinigag.k3min.eu/token`
 
-### Parameters
+#### Parameters
 
 Parameter                  | Description
 ---------                  | -----------
 **username**<br>*required* | End-user username.<br>**Example Values**: `hi@k3min.eu`
 **password**<br>*required* | End-user password.<br>**Example Values**: `secret`
 
-### Example Request
+#### Example Request
 
 `POST http://infinigag.k3min.eu/token?username=hi%40k3min.eu&password=secret`
 
-### Example Result
+#### Example Result
 
 ```json
 {
@@ -84,25 +90,25 @@ Parameter                  | Description
 }
 ```
 
-## POST /vote/:type/:id
+### POST /vote/:type/:id
 
-### Resource URL
+#### Resource URL
 
 `http://infinigag.k3min.eu/vote/:type/:id`
 
-### Parameters
+#### Parameters
 
 Parameter                      | Description
 ---------                      | -----------
         **type**<br>*required* | Vote type (`like`, `dislike` or `unlike`).<br>**Example Values**: `like`
           **id**<br>*required* | The gag ID.<br>**Example Values**: `EyVtjpq`
-**access_token**<br>*required* | Token obtained from [`POST /token`](#POST /token).<br>**Example Values**: `9125faf1dda6c7d3fe5cc5574e5ff79158208918955275753b4e1d58efecdf9d`
+**access_token**<br>*required* | Token obtained from [`POST /token`](#post-token).<br>**Example Values**: `9125faf1dda6c7d3fe5cc5574e5ff79158208918955275753b4e1d58efecdf9d`
 
-### Example Request
+#### Example Request
 
 `POST http://infinigag.k3min.eu/vote/like/EyVtjpq?access_token=9125faf1dda6c7d3fe5cc5574e5ff79158208918955275753b4e1d58efecdf9d`
 
-### Example Result
+#### Example Result
 
 ```json
 {
