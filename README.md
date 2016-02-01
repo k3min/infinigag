@@ -6,18 +6,20 @@ I love it when services provide API's. It allows people to play around and make 
 
 ## Resource URL
 
-- http://infinigag.k3min.eu/:section/:id
+`http://infinigag.k3min.eu/:section/:id`
 
 ## Parameters
 
 Parameter                 | Description
-------------------------- | -----------
+---------                 | -----------
 **section**<br>*required* | The section (or subsection) to return results from (`hot`, `trending`, `fresh`, etc.)<br>**Example Values**: `design/fresh`
      **id**<br>*optional* | Specifies the page ID to retrieve results from.<br>**Example Values**: `V8eFpqG`
 
 ## Example Request
 
-**GET** [`http://infinigag.k3min.eu/design/fresh`](http://infinigag.k3min.eu/design/fresh)
+`GET http://infinigag.k3min.eu/design/fresh`
+
+## Example Result
 
 	{
 		"status": 200,
