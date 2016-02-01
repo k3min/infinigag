@@ -6,9 +6,9 @@ I love it when services provide API's. It allows people to play around and make 
 
 ## API
 
-- [`GET /:section/:id`](#get-sectionid)
-- [`POST /token`](#post-token)
-- [`POST /vote/:type/:id`](#post-votetypeid)
+- [GET /:section/:id](#get-sectionid)
+- [POST /token](#post-token)
+- [POST /vote/:type/:id](#post-votetypeid)
 
 ### GET /:section/:id
 
@@ -22,7 +22,7 @@ Parameter                      | Description
 ---------                      | -----------
      **section**<br>*required* | The section (or subsection) to return results from (`hot`, `trending`, `fresh`, etc.)<br>**Example Values**: `design/fresh`
           **id**<br>*optional* | Specifies the page ID to retrieve results from.<br>**Example Values**: `V8eFpqG`
-**access_token**<br>*optional* | Token obtained from [`POST /token`](#post-token).<br>**Example Values**: `9125faf1dda6c7d3fe5cc5574e5ff79158208918955275753b4e1d58efecdf9d`
+**access_token**<br>*optional* | Token obtained from [POST /token](#post-token).<br>**Example Values**: `9125faf1dda6c7d3fe5cc5574e5ff79158208918955275753b4e1d58efecdf9d`
 
 #### Example Request
 
@@ -110,7 +110,7 @@ Parameter                      | Description
 ---------                      | -----------
         **type**<br>*required* | Vote type (`like`, `dislike` or `unlike`).<br>**Example Values**: `like`
           **id**<br>*required* | The gag ID.<br>**Example Values**: `EyVtjpq`
-**access_token**<br>*required* | Token obtained from [`POST /token`](#post-token).<br>**Example Values**: `9125faf1dda6c7d3fe5cc5574e5ff79158208918955275753b4e1d58efecdf9d`
+**access_token**<br>*required* | Token obtained from [POST /token](#post-token).<br>**Example Values**: `9125faf1dda6c7d3fe5cc5574e5ff79158208918955275753b4e1d58efecdf9d`
 
 #### Example Request
 
@@ -135,5 +135,7 @@ POST `http://infinigag.k3min.eu/vote/like/EyVtjpq?access_token=9125faf1dda6c7d3f
 
 ## Uses
 
-- [9GAG (Unofficial)](http://apps.microsoft.com/windows/app/9gag-unofficial/846be2db-a72a-47b7-9507-e81ce0d2dd5b)
-- [GagBook](http://github.com/dicksonleong/GagBook)
+- [stormzhang/9GAG](http://github.com/stormzhang/9GAG)
+- [Mixiaoxiao/9GAG](http://github.com/Mixiaoxiao/9GAG)
+- [dicksonleong/GagBook](http://github.com/dicksonleong/GagBook)
+- [vinceyuan/Demo9GAG](http://github.com/vinceyuan/Demo9GAG)
