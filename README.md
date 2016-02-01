@@ -26,9 +26,11 @@ Parameter                      | Description
 
 #### Example Request
 
-`GET http://infinigag.k3min.eu/design/fresh`
+##### Request URL:
 
-#### Example Result
+GET `http://infinigag.k3min.eu/design/fresh`
+
+##### Response:
 
 ```json
 {
@@ -78,9 +80,15 @@ Parameter                  | Description
 
 #### Example Request
 
-`POST http://infinigag.k3min.eu/token?username=hi%40k3min.eu&password=secret`
+##### Request URL:
 
-#### Example Result
+POST `http://infinigag.k3min.eu/token`
+
+##### Request POST Body:
+
+`username=hi%40k3min.eu&password=secret`
+
+##### Response:
 
 ```json
 {
@@ -106,9 +114,15 @@ Parameter                      | Description
 
 #### Example Request
 
-`POST http://infinigag.k3min.eu/vote/like/EyVtjpq?access_token=9125faf1dda6c7d3fe5cc5574e5ff79158208918955275753b4e1d58efecdf9d`
+##### Request URL:
 
-#### Example Result
+POST `http://infinigag.k3min.eu/vote/like/EyVtjpq?access_token=9125faf1dda6c7d3fe5cc5574e5ff79158208918955275753b4e1d58efecdf9d`
+
+##### Request POST Body:
+
+*N/A*
+
+##### Response:
 
 ```json
 {
