@@ -21,37 +21,38 @@ Parameter                 | Description
 
 ## Example Result
 
-	{
-		"status": 200,
-		"message": "OK",
-		"data": [
-			{
-				"id": "EyVtjpq",
-				"caption": "Example",
-				"images": {
-					"small": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_220x145.jpg",
-					"cover": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_460c.jpg",
-					"normal": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_460s.jpg",
-					"large": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_700b.jpg"
-				},
-				"media": {
-					"mp4": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_460sv.mp4",
-					"webm": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_460svwm.webm"
-				},
-				"link": "http:\/\/9gag.com\/gag\/EyVtjpq",
-				"votes": {
-					"count": 0
-				},
-				"comments": {
-					"count": 0
-				}
+```json
+{
+	"status": 200,
+	"message": "OK",
+	"data": [
+		{
+			"id": "EyVtjpq",
+			"caption": "Example",
+			"images": {
+				"small": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_220x145.jpg",
+				"cover": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_460c.jpg",
+				"normal": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_460s.jpg",
+				"large": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_700b.jpg"
 			},
-			...
-		],
-		"paging": {
-			"next": "V8eFpqG"
+			"media": {
+				"mp4": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_460sv.mp4",
+				"webm": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_460svwm.webm"
+			},
+			"link": "http:\/\/9gag.com\/gag\/EyVtjpq",
+			"votes": {
+				"count": 0
+			},
+			"comments": {
+				"count": 0
+			}
 		}
+	],
+	"paging": {
+		"next": "V8eFpqG"
 	}
+}
+```
 
 ## Uses
 
