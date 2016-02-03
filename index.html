@@ -27,12 +27,24 @@
 <p>I love it when services provide API's. It allows people to play around and make cool apps, and so I did not want to take the fun away from you.</p>
 
 <h2>
-<a id="resource-url" class="anchor" href="#resource-url" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Resource URL</h2>
+<a id="api" class="anchor" href="#api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>API</h2>
+
+<ul>
+<li><a href="#get-sectionid">GET /:section/:id</a></li>
+<li><a href="#post-token">POST /token</a></li>
+<li><a href="#post-votetypeid">POST /vote/:type/:id</a></li>
+</ul>
+
+<h3>
+<a id="get-sectionid" class="anchor" href="#get-sectionid" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>GET /:section/:id</h3>
+
+<h4>
+<a id="resource-url" class="anchor" href="#resource-url" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Resource URL</h4>
 
 <p><code>http://infinigag.k3min.eu/:section/:id</code></p>
 
-<h2>
-<a id="parameters" class="anchor" href="#parameters" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Parameters</h2>
+<h4>
+<a id="parameters" class="anchor" href="#parameters" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Parameters</h4>
 
 <table>
 <thead>
@@ -56,56 +68,190 @@
 <td>Specifies the page ID to retrieve results from.<br><strong>Example Values</strong>: <code>V8eFpqG</code>
 </td>
 </tr>
+<tr>
+<td>
+<strong>access_token</strong><br><em>optional</em>
+</td>
+<td>Token obtained from <a href="#post-token">POST /token</a>.<br><strong>Example Values</strong>: <code>9125faf1dda6c7d3fe5cc5574e5ff79158208918955275753b4e1d58efecdf9d</code>
+</td>
+</tr>
 </tbody>
 </table>
 
-<h2>
-<a id="example-request" class="anchor" href="#example-request" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example Request</h2>
+<h4>
+<a id="example-request" class="anchor" href="#example-request" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example Request</h4>
 
-<p><code>GET http://infinigag.k3min.eu/design/fresh</code></p>
+<h5>
+<a id="request-url" class="anchor" href="#request-url" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Request URL:</h5>
 
-<h2>
-<a id="example-result" class="anchor" href="#example-result" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example Result</h2>
+<p>GET <code>http://infinigag.k3min.eu/design/fresh</code></p>
 
-<pre><code>{
-    "status": 200,
-    "message": "OK",
-    "data": [
+<h5>
+<a id="response" class="anchor" href="#response" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Response:</h5>
+
+<div class="highlight highlight-source-json"><pre>{
+    <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>: <span class="pl-c1">200</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>message<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>OK<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>: [
         {
-            "id": "EyVtjpq",
-            "caption": "Example",
-            "images": {
-                "small": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_220x145.jpg",
-                "cover": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_460c.jpg",
-                "normal": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_460s.jpg",
-                "large": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_700b.jpg"
+            <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>EyVtjpq<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>caption<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Example<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>images<span class="pl-pds">"</span></span>: {
+                <span class="pl-s"><span class="pl-pds">"</span>small<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>http:<span class="pl-cce">\/\/</span>img-9gag-fun.9cache.com<span class="pl-cce">\/</span>photo<span class="pl-cce">\/</span>EyVtjpq_220x145.jpg<span class="pl-pds">"</span></span>,
+                <span class="pl-s"><span class="pl-pds">"</span>cover<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>http:<span class="pl-cce">\/\/</span>img-9gag-fun.9cache.com<span class="pl-cce">\/</span>photo<span class="pl-cce">\/</span>EyVtjpq_460c.jpg<span class="pl-pds">"</span></span>,
+                <span class="pl-s"><span class="pl-pds">"</span>normal<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>http:<span class="pl-cce">\/\/</span>img-9gag-fun.9cache.com<span class="pl-cce">\/</span>photo<span class="pl-cce">\/</span>EyVtjpq_460s.jpg<span class="pl-pds">"</span></span>,
+                <span class="pl-s"><span class="pl-pds">"</span>large<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>http:<span class="pl-cce">\/\/</span>img-9gag-fun.9cache.com<span class="pl-cce">\/</span>photo<span class="pl-cce">\/</span>EyVtjpq_700b.jpg<span class="pl-pds">"</span></span>
             },
-            "media": {
-                "mp4": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_460sv.mp4",
-                "webm": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_460svwm.webm"
+            <span class="pl-s"><span class="pl-pds">"</span>media<span class="pl-pds">"</span></span>: {
+                <span class="pl-s"><span class="pl-pds">"</span>mp4<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>http:<span class="pl-cce">\/\/</span>img-9gag-fun.9cache.com<span class="pl-cce">\/</span>photo<span class="pl-cce">\/</span>EyVtjpq_460sv.mp4<span class="pl-pds">"</span></span>,
+                <span class="pl-s"><span class="pl-pds">"</span>webm<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>http:<span class="pl-cce">\/\/</span>img-9gag-fun.9cache.com<span class="pl-cce">\/</span>photo<span class="pl-cce">\/</span>EyVtjpq_460svwm.webm<span class="pl-pds">"</span></span>
             },
-            "link": "http:\/\/9gag.com\/gag\/EyVtjpq",
-            "votes": {
-                "count": 0
+            <span class="pl-s"><span class="pl-pds">"</span>link<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>http:<span class="pl-cce">\/\/</span>9gag.com<span class="pl-cce">\/</span>gag<span class="pl-cce">\/</span>EyVtjpq<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>votes<span class="pl-pds">"</span></span>: {
+                <span class="pl-s"><span class="pl-pds">"</span>count<span class="pl-pds">"</span></span>: <span class="pl-c1">0</span>
             },
-            "comments": {
-                "count": 0
+            <span class="pl-s"><span class="pl-pds">"</span>comments<span class="pl-pds">"</span></span>: {
+                <span class="pl-s"><span class="pl-pds">"</span>count<span class="pl-pds">"</span></span>: <span class="pl-c1">0</span>
             }
-        },
-        ...
+        }
     ],
-    "paging": {
-        "next": "V8eFpqG"
+    <span class="pl-s"><span class="pl-pds">"</span>paging<span class="pl-pds">"</span></span>: {
+        <span class="pl-s"><span class="pl-pds">"</span>next<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>V8eFpqG<span class="pl-pds">"</span></span>
     }
-}
-</code></pre>
+}</pre></div>
+
+<h3>
+<a id="post-token" class="anchor" href="#post-token" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>POST /token</h3>
+
+<h4>
+<a id="resource-url-1" class="anchor" href="#resource-url-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Resource URL</h4>
+
+<p><code>http://infinigag.k3min.eu/token</code></p>
+
+<h4>
+<a id="parameters-1" class="anchor" href="#parameters-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Parameters</h4>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>username</strong><br><em>required</em>
+</td>
+<td>End-user username.<br><strong>Example Values</strong>: <code>hi@k3min.eu</code>
+</td>
+</tr>
+<tr>
+<td>
+<strong>password</strong><br><em>required</em>
+</td>
+<td>End-user password.<br><strong>Example Values</strong>: <code>secret</code>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h4>
+<a id="example-request-1" class="anchor" href="#example-request-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example Request</h4>
+
+<h5>
+<a id="request-url-1" class="anchor" href="#request-url-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Request URL:</h5>
+
+<p>POST <code>http://infinigag.k3min.eu/token</code></p>
+
+<h5>
+<a id="request-post-body" class="anchor" href="#request-post-body" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Request POST Body:</h5>
+
+<p><code>username=hi%40k3min.eu&amp;password=secret</code></p>
+
+<h5>
+<a id="response-1" class="anchor" href="#response-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Response:</h5>
+
+<div class="highlight highlight-source-json"><pre>{
+    <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>: <span class="pl-c1">200</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>message<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>OK<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>access_token<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>9125faf1dda6c7d3fe5cc5574e5ff79158208918955275753b4e1d58efecdf9d<span class="pl-pds">"</span></span>
+}</pre></div>
+
+<h3>
+<a id="post-votetypeid" class="anchor" href="#post-votetypeid" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>POST /vote/:type/:id</h3>
+
+<h4>
+<a id="resource-url-2" class="anchor" href="#resource-url-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Resource URL</h4>
+
+<p><code>http://infinigag.k3min.eu/vote/:type/:id</code></p>
+
+<h4>
+<a id="parameters-2" class="anchor" href="#parameters-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Parameters</h4>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>type</strong><br><em>required</em>
+</td>
+<td>Vote type (<code>like</code>, <code>dislike</code> or <code>unlike</code>).<br><strong>Example Values</strong>: <code>like</code>
+</td>
+</tr>
+<tr>
+<td>
+<strong>id</strong><br><em>required</em>
+</td>
+<td>The gag ID.<br><strong>Example Values</strong>: <code>EyVtjpq</code>
+</td>
+</tr>
+<tr>
+<td>
+<strong>access_token</strong><br><em>required</em>
+</td>
+<td>Token obtained from <a href="#post-token">POST /token</a>.<br><strong>Example Values</strong>: <code>9125faf1dda6c7d3fe5cc5574e5ff79158208918955275753b4e1d58efecdf9d</code>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h4>
+<a id="example-request-2" class="anchor" href="#example-request-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example Request</h4>
+
+<h5>
+<a id="request-url-2" class="anchor" href="#request-url-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Request URL:</h5>
+
+<p>POST <code>http://infinigag.k3min.eu/vote/like/EyVtjpq?access_token=9125faf1dda6c7d3fe5cc5574e5ff79158208918955275753b4e1d58efecdf9d</code></p>
+
+<h5>
+<a id="request-post-body-1" class="anchor" href="#request-post-body-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Request POST Body:</h5>
+
+<p><em>N/A</em></p>
+
+<h5>
+<a id="response-2" class="anchor" href="#response-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Response:</h5>
+
+<div class="highlight highlight-source-json"><pre>{
+    <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>: <span class="pl-c1">200</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>message<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>OK<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>EyVtjpq<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>score<span class="pl-pds">"</span></span>: <span class="pl-c1">1</span>
+}</pre></div>
 
 <h2>
 <a id="uses" class="anchor" href="#uses" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Uses</h2>
 
 <ul>
-<li><a href="http://apps.microsoft.com/windows/app/9gag-unofficial/846be2db-a72a-47b7-9507-e81ce0d2dd5b">9GAG (Unofficial)</a></li>
-<li><a href="http://github.com/dicksonleong/GagBook">GagBook</a></li>
+<li><a href="http://github.com/stormzhang/9GAG">stormzhang/9GAG</a></li>
+<li><a href="http://github.com/Mixiaoxiao/9GAG">Mixiaoxiao/9GAG</a></li>
+<li><a href="http://github.com/dicksonleong/GagBook">dicksonleong/GagBook</a></li>
+<li><a href="http://github.com/vinceyuan/Demo9GAG">vinceyuan/Demo9GAG</a></li>
 </ul>
 
       <footer class="site-footer">
