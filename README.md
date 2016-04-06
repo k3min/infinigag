@@ -9,6 +9,7 @@ I love it when services provide API's. It allows people to play around and make 
 - [GET /:section/:id](#get-sectionid)
 - [POST /token](#post-token)
 - [POST /vote/:type/:id](#post-votetypeid)
+- [GET /gag/:id](#get-gagid)
 
 ### GET /:section/:id
 
@@ -130,6 +131,53 @@ POST `http://infinigag.k3min.eu/vote/like/EyVtjpq?access_token=9125faf1dda6c7d3f
 	"message": "OK",
 	"id": "EyVtjpq",
 	"score": 1
+}
+```
+
+### GET /gag/:id
+
+#### Resource URL
+
+`http://infinigag.k3min.eu/gag/:id`
+
+#### Parameters
+
+Parameter                      | Description
+---------                      | -----------
+          **id**<br>*required* | Specifies the page ID to retrieve results from.<br>**Example Values**: `EyVtjpq`
+**access_token**<br>*optional* | Token obtained from [POST /token](#post-token).<br>**Example Values**: `9125faf1dda6c7d3fe5cc5574e5ff79158208918955275753b4e1d58efecdf9d`
+
+#### Example Request
+
+##### Request URL:
+
+GET `http://infinigag.k3min.eu/gag/EyVtjpq`
+
+##### Response:
+
+```json
+{
+	"status": 200,
+	"message": "OK",
+	"id": "EyVtjpq",
+	"caption": "Example",
+	"images": {
+		"small": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_220x145.jpg",
+		"cover": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_460c.jpg",
+		"normal": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_460s.jpg",
+		"large": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_700b.jpg"
+	},
+	"media": {
+		"mp4": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_460sv.mp4",
+		"webm": "http:\/\/img-9gag-fun.9cache.com\/photo\/EyVtjpq_460svwm.webm"
+	},
+	"link": "http:\/\/9gag.com\/gag\/EyVtjpq",
+	"votes": {
+		"count": 0
+	},
+	"comments": {
+		"count": 0
+	}
 }
 ```
 
