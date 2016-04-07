@@ -10,6 +10,7 @@ I love it when services provide API's. It allows people to play around and make 
 - [POST /token](#post-token)
 - [POST /vote/:type/:id](#post-votetypeid)
 - [GET /gag/:id](#get-gagid)
+- [GET /comments/:id](#get-commentsid)
 
 ### GET /:section/:id
 
@@ -177,6 +178,87 @@ GET `http://infinigag.k3min.eu/gag/EyVtjpq`
 	},
 	"comments": {
 		"count": 0
+	}
+}
+```
+
+### GET /comments/:id
+
+#### Resource URL
+
+`http://infinigag.k3min.eu/comments/:id`
+
+#### Parameters
+
+Parameter                    | Description
+---------                    | -----------
+        **id**<br>*required* | Specifies the page ID to retrieve results from.<br>**Example Values**: `EyVtjpq`
+     **count**<br>*optional* | The amount of comments to retrieve (defaults to `10`).<br>**Example Values**: `10`
+     **level**<br>*optional* | The maximum level comments (defaults to `1`).<br>**Example Values**: `2`
+     **order**<br>*optional* | Sorting order (only `score` is known to be valid).<br>**Example Values**: `score`
+       **ref**<br>*optional* | Can be used to page results.<br>**Example Values**: `score_26902865197043_26902865197043`
+**refComment**<br>*optional* | Can be used to page comments.<br>**Example Values**: `c_141726493230089540`
+
+#### Example Request
+
+##### Request URL:
+
+GET `http://infinigag.k3min.eu/comments/EyVtjpq?order=score`
+
+##### Response:
+
+```json
+{
+	"status": 200,
+	"message": "OK",
+	"id": "EyVtjpq",
+	"link": "http:\/\/9gag.com\/gag\/EyVtjpq",
+	"data": [
+		{
+			"id": "c_269028651970438660",
+			"parent": "c_394180510356090940",
+			"timestamp": 1355314332,
+			"type": "text",
+			"text": "Hello world!",
+			"user": {
+				"id": "GTCd8Wj",
+				"avatar": "http:\/\/accounts-cdn.9gag.com\/media\/avatar\/5855062_100_4.jpg",
+				"displayName": "k3min",
+				"link": "http:\/\/9gag.com\/u\/k3min"
+			},
+			"children": {
+				"data": [
+					{
+						"id": "c_141726493230089540",
+						"parent": "c_269028651970438660",
+						"timestamp": 1355314332,
+						"type": "text",
+						"text": "Some reply.",
+						"user": {
+							"id": "pefUKCk",
+							"avatar": "http:\/\/accounts-cdn.9gag.com\/media\/avatar\/2213915_100_3.jpg",
+							"displayName": "some_user",
+							"link": "http:\/\/9gag.com\/u\/some_user"
+						},
+						"children": {
+							"data": null,
+							"count": 0,
+							"paging": {
+								"next": null
+							}
+						}
+					}
+				],
+				"count": 2,
+				"paging": {
+					"next": "c_141726493230089540"
+				}
+			}
+		}
+	],
+	"count": 123,
+	"paging": {
+		"next": "score_26902865197043_26902865197043"
 	}
 }
 ```
